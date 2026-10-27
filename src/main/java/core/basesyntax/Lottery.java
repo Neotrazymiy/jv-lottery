@@ -4,8 +4,10 @@ import java.util.Random;
 
 public class Lottery extends ColorSupplier {
 
+    private static final int MAX_NUMBER = 101;
+
     public Ball getRandomBall() {
-        int indexNumber = new Random().nextInt(100);
+        int indexNumber = ColorSupplier.RANDOM.nextInt(MAX_NUMBER);
         return new Ball(getRandomColor(), indexNumber);
     }
 }
